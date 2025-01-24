@@ -58,14 +58,14 @@ All we need to do now is make some 2D calculations where the (x,y) coordinates o
 
 The 3D algorithm is similar to the technique used for 2D, to avoid just pushing the entire maze to OpenGL, on each frame.
 
-There are two large differences, though:
+There are a few large differences, though:
 
 * We no longer think of a planar screen and (x,y) coordinates there, but we think of the actual 3D maze and its (x,y,z) coordinates. Those are the ones pushed to OpenGL, and with the correct positioning of the camera (player), OpenGL handles the rest.
 * Given all maze coordinates are squares, and OpenGL does the remaining coordinate translation to the screen, we also draw the ceiling and floor on each step.
 * Given that it's just as easy to fill OpenGL surfaces with a flat color or an image, we use pre-drawn images to illustrate and simulate lights.
 * Besides drawing all the walls of the path in front of the player, we also draw all walls on each path on both sides of the user. This allows the viewing window to be resized very wide and display the periphery walls correctly, and also allows the animations of rotation to work correctly.
 
-These are the images (textures) use to draw walls, ceiling and floor.
+These are the images (textures) used to draw walls, ceiling and floor.
 
 ![Maze How-to](README-howto-7.png)
 
